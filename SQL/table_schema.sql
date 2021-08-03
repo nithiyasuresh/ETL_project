@@ -3,21 +3,21 @@ drop table if exists disciplines cascade;
 drop table if exists atheletes cascade;
 drop table if exists coaches cascade;
 
---COUNTRY--
+--COUNTRIES--
 CREATE TABLE countries (
   PRIMARY KEY (country_id),
   country_id VARCHAR NOT NULL,
   country_name VARCHAR NOT NULL
 );
 
---DISCIPLINE--
+--DISCIPLINES--
 CREATE TABLE disciplines (
   PRIMARY KEY (discipline_id),
   discipline_id VARCHAR NOT NULL,
 	discipline VARCHAR NOT NULL
 );
 
---ATHLETE--
+--ATHLETES--
 CREATE TABLE atheletes (
   PRIMARY KEY (athelete_id),
   FOREIGN KEY (athelete_discipline_id) REFERENCES disciplines(discipline_id),
